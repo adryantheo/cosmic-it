@@ -59,6 +59,7 @@ class SoalController extends Controller
     public function show(Soal $soal)
     {
         //
+        return response()->json($soal, 200);
     }
 
     /**

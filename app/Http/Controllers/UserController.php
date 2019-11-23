@@ -1,49 +1,35 @@
 <?php
-
 namespace App\Http\Controllers;
 use App\User;
 use Validator;
 use Auth;
-
 use Illuminate\Http\Request;
-
 class UserController extends Controller
 {
-    // public function login(Request $requests){
-        
-    //     $user = new User();
-
-    //     $status = $user::create([
-    //         $requests->email,
-    //         $requests->password,
-    //     ]);
-    //     return response()->json([
-    //         'Status' => $status, 
-    //     ]);
-    // }
+    public function test(){
+        return response()->json('Checked');
+    }
+    public function register(Request $request){
+        $user = new User();
+        $status = User::create([
+            'email' => $request->email,
+            'name' => $request->name,
+            'password' => bcrypt($request->password),
+        ]);
+        return response()->json([
+            'user' => $status, 
+        ]);
+    }
     public function login(Request $request){
-        $status= 401;
-        $response= ['error' => 'Unauthorised'];
-        if (Auth::attempt($request->only(['email','password']))) {
-            $status= 200;
-            $response= [
-                'user' => Auth::user(),
-                'token' => Auth::user()->createToken('token')->accessToken,
-            ];
-        }
-        return response()->json($response, $status);
+        
     }
-
-    public function register(){
-
-    }
-
     public function getUser(User $user){
-
+        return response()->json($user, 200);
     }
-    public function updateScore(Request $requests, User $user){
-        $status= $user->update();
-
+    public function updateScore (Request $request,User $user){
+        $status = $user->update([
+            $request->only(['score'])
+        ]);
+        return response()->json($status, 200);
     }
-
 }

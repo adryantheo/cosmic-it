@@ -10,14 +10,12 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <script :src='./resource/js/app.js'></script>
+        <script src="{{ mix('/js/app.js') }}"></script>
     </head>
     <body>
+    <div id="app">
         <app-root></app-root>
+    </div>
     </body>
 </html>
 
-</div>
-    </body>
-    <script src="{{ mix('/js/app.js') }}"></script>
-</html>

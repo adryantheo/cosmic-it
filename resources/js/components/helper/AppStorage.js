@@ -1,14 +1,14 @@
 class AppStorage
 {
     storeToken(token){
-        localStorage.setItem('umkm-token', token);
+        localStorage.setItem('token', token);
     }
     storeUser(user){
-        localStorage.setItem('umkm-user', user);
+        localStorage.setItem('user', user);
     }
 
     storeName(name){
-        localStorage.setItem('Owner', JSON.parse(name));
+        localStorage.setItem('Name', JSON.parse(name));
     }
 
     storeCompany(company){

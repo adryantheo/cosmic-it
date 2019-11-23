@@ -7,15 +7,11 @@ use Illuminate\Http\Request;
 
 class SoalController extends Controller
 {
+    
     public function index()
     {
         //
         return response()->json(Soal::all(), 200);
-    }
-
-    public function create()
-    {
-        //
     }
 
     public function store(Request $request)
@@ -34,24 +30,24 @@ class SoalController extends Controller
             return response()->json('gagal simpan', 400);
     }
 
+   
     public function show(Soal $soal)
     {
         //
         return response()->json($soal, 200);
     }
 
-    public function edit(Soal $soal)
-    {
-        //
-    }
-
+   
     public function update(Request $request, Soal $soal)
     {
         //
     }
 
+   
     public function destroy(Soal $soal)
     {
-        //
+        $status = $soal->delete();
+
+        return response()->json($status, 200);
     }
 }

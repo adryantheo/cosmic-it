@@ -11,3 +11,9 @@ Vue.use(Vuetify({
     theme:'#FFFFFF',
     iconfont: 'md',
 }))
+
+const vue = new Vue({
+    el: '#app',
+    router,
+    component: './AppRoot'
+})

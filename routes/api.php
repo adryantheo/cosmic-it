@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
-
+Route::get('cekapi', 'UserController@test');
 Route::post('login', 'UserController@login');
 Route::post('register', 'UserController@register');
 Route::get('user/{user}', 'UserController@getUser');

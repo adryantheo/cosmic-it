@@ -9,23 +9,26 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
-    public function login(Request $requests){
-        
-        $user = new User();
+    public function test(){
+        return response()->json('Checked');
+    }
 
-        $status = $user::create([
-            $requests->email,
-            $requests->password,
+    public function register(Request $request){
+        $user = new User();
+        $status = User::create([
+            'email' => $request->email,
+            'name' => $request->name,
+            'password' => bcrypt($request->password),
         ]);
         return response()->json([
-            'Status' => $status, 
+            'user' => $status, 
         ]);
     }
-    public function register(){
+    public function login(){
 
     }
     public function getUser(User $user){
-
+        return response()->json($user, 200);
     }
     public function updateScore(Request $requests, User $user){
 

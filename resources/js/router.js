@@ -1,5 +1,6 @@
 import VueRouter from 'vue-router'
 import axios from 'axios';
+import Vuetify from 'vuetify'
 
 const routes = [
 
@@ -7,6 +8,10 @@ const routes = [
     { path: '/login', component: './components/Login.vue' },
     { path: '/', component: './component/Dashboard.vue'},
 ]
+
+const router= {
+    Vuetify
+}
 
 
 export default router;

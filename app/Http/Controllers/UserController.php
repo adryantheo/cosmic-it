@@ -21,7 +21,7 @@ class UserController extends Controller
         ]);
     }
     public function login(Request $request){
-        
+ 
     }
     public function getUser(User $user){
         return response()->json($user, 200);

@@ -12,7 +12,7 @@ Vue.use(Vuetify({
     theme:'#FFFFFF',
     iconfont: 'md',
 }))
-import User from '';
+import User from './components/helpers/User';
 
 Vue.prototype.$user= User;
 const vue = new Vue({

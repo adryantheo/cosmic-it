@@ -10,9 +10,9 @@
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
         <!-- Styles -->
-        <script :src='./resource/app.js'></script>
+        <script :src='./resource/js/app.js'></script>
     </head>
     <body>
-        <v-app></v-app>
+        <app-root></app-root>
     </body>
 </html>

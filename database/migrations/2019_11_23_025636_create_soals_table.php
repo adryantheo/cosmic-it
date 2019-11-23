@@ -15,10 +15,10 @@ class CreateSoalsTable extends Migration
     {
         Schema::create('soals', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('pertanyaan');
-            $table->string('benar');
-            $table->string('salah1');
-            $table->string('salah2');
+            $table->text('pertanyaan');
+            $table->text('benar');
+            $table->text('salah1');
+            $table->text('salah2');
             $table->timestamps();
         });
     }

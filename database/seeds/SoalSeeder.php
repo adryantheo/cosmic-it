@@ -13,47 +13,41 @@ class SoalSeeder extends Seeder
     public function run()
     {
         Soal::create([
-            'id_game'=> 1, 
             'pertanyaan'=> 'Fungsi dari kelas pada OOP?', 
             'benar'=> 'Prototipe yang digunakan untuk menciptakan objek', 
             'salah1'=> 'Kombinasi data dan fungsionalitas dalam sebuah unit tunggal', 
-            'salah2'=> 'Mewarisi sifat dari kelas lain yang sudah ada'
+            'salah2'=> 'Mewarisi sifat dari kelas lain yang sudah ada',
         ]);
 
-        Soal::create([
-            'id_game'=> 1, 
+        Soal::create([ 
             'pertanyaan'=> 'Yang merupakan framework javascript', 
             'benar'=> 'Angular, Backbone, Ember', 
             'salah1'=> 'Symfony, Yii, Ionic', 
             'salah2'=> 'Django, Selenium, CherryPy'
         ]);
 
-        Soal::create([
-            'id_game'=> 1, 
+        Soal::create([ 
             'pertanyaan'=> 'Manakah bahasa pemrograman yang paling elegan berikut ini?', 
             'benar'=> 'Javascript', 
             'salah1'=> 'Ruby', 
             'salah2'=> 'PHP'
         ]);
 
-        Soal::create([
-            'id_game'=> 2, 
+        Soal::create([ 
             'pertanyaan'=> 'Bagaimana cara memanggil pustaka pada C#?', 
             'benar'=> 'Using', 
             'salah1'=> 'Include', 
             'salah2'=> 'Import'
         ]);
 
-        Soal::create([
-            'id_game'=> 2, 
+        Soal::create([ 
             'pertanyaan'=> 'Anda bermaksud menyimpan angka pecahan, maka variabel yang digunakan adalah?', 
             'benar'=> 'Float', 
             'salah1'=> 'Boolean', 
             'salah2'=> 'Integer'
         ]);
 
-        Soal::create([
-            'id_game'=> 2, 
+        Soal::create([ 
             'pertanyaan'=> 'Yang bukan tag HTML', 
             'benar'=> 'View', 
             'salah1'=> 'Div', 
@@ -61,7 +55,6 @@ class SoalSeeder extends Seeder
         ]);
 
         Soal::create([
-            'id_game'=> 3, 
             'pertanyaan'=> '
                 Class Hello {
                     public static void main(String[] args) {
@@ -74,8 +67,7 @@ class SoalSeeder extends Seeder
             'salah2'=> ''
         ]);
 
-        Soal::create([
-            'id_game'=> 3, 
+        Soal::create([ 
             'pertanyaan'=> '
                 $tebakan= 5;
                 if ($tebakan < 5) {
@@ -93,8 +85,7 @@ class SoalSeeder extends Seeder
             'salah2'=> ''
         ]);
 
-        Soal::create([
-            'id_game'=> 3, 
+        Soal::create([ 
             'pertanyaan'=> '
                 <!DOCTYPE html>
                 <html>

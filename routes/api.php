@@ -9,3 +9,4 @@ Route::post('score/{user}', 'UserController@updateScore');
 
 Route::post('soal', 'SoalController@store');
 Route::get('soal', 'SoalController@index');
+Route::get('soal/{soal}', 'SoalController@show');

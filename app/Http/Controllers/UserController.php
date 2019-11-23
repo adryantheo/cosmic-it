@@ -24,13 +24,16 @@ class UserController extends Controller
             'user' => $status, 
         ]);
     }
-    public function login(){
-
+    public function login(Request $request){
+        
     }
     public function getUser(User $user){
         return response()->json($user, 200);
     }
-    public function updateScore(Request $requests, User $user){
-
+    public function updateScore (Request $request,User $user){
+        $status = $user->update([
+            $request->only(['score'])
+        ]);
+        return response()->json($status, 200);
     }
 }
